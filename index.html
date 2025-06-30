@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoodBoard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen font-sans p-6">
+  <header class="text-center mb-10">
+    <h1 class="text-4xl font-bold">MoodBoard</h1>
+    <p class="text-gray-400 mt-2" id="quote">Fetching today's quote...</p>
+  </header>
+
+  <main class="grid md:grid-cols-2 gap-10">
+    <!-- To-Do List -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4">📝 Your Tasks</h2>
+      <div class="mb-4">
+        <input id="taskInput" type="text" placeholder="Add a task..." class="w-full p-2 rounded text-black" />
+        <button onclick="addTask()" class="bg-blue-500 hover:bg-blue-600 mt-2 px-4 py-2 rounded">Add Task</button>
+      </div>
+      <ul id="taskList" class="space-y-2"></ul>
+    </section>
+
+    <!-- Mood Tracker -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4">😊 How are you feeling today?</h2>
+      <select id="moodSelect" class="w-full p-2 text-black rounded">
+        <option>😄 Happy</option>
+        <option>😐 Neutral</option>
+        <option>😔 Sad</option>
+        <option>😠 Angry</option>
+        <option>😴 Tired</option>
+      </select>
+      <button onclick="saveMood()" class="bg-green-500 hover:bg-green-600 mt-2 px-4 py-2 rounded">Save Mood</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
